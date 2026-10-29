@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     background: #111422;
     font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
     user-select: none;
 }
-
+ 
 .game-container {
     width: 100%;
     max-width: 900px;
@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
+ 
 /* Barra Superior (HUD) */
 .hud-bar {
     width: 100%;
@@ -40,28 +40,28 @@ body {
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
-
+ 
 .player-info,
 .score-info {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
+ 
 .label {
     font-family: 'Press Start 2P', cursive;
     font-size: 11px;
     color: #ffcc00;
     letter-spacing: 1px;
 }
-
+ 
 .value {
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     color: #ffffff;
     text-shadow: 2px 2px #000;
 }
-
+ 
 /* Tabuleiro do Jogo */
 .game-board {
     width: 100%;
@@ -73,12 +73,12 @@ body {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-
+ 
     background: url('../assets/fundo.jpg') center center / cover no-repeat;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-
+ 
 /* Elementos do Jogo */
 .pipe {
     position: absolute;
@@ -86,7 +86,7 @@ body {
     width: 80px;
     right: -80px;
 }
-
+ 
 .roberto {
     width: 150px;
     position: absolute;
@@ -94,14 +94,14 @@ body {
     left: 20px;
     z-index: 10;
 }
-
+ 
 .fundo {
     position: absolute;
     width: 99%;
     top: 99%;
     right: -550px;
 }
-
+ 
 /* Dica de pulo na tela */
 .jump-tip {
     position: absolute;
@@ -114,58 +114,58 @@ body {
     pointer-events: none;
     transition: opacity 0.3s;
 }
-
+ 
 /* Animações ativas durante o jogo */
 .game-board.running .pipe {
     animation: pipe-animation 1.6s infinite linear;
 }
-
+ 
 .game-board.running .fundo {
     animation: fundo-animation 18s infinite linear;
 }
-
+ 
 .jump {
     animation: jump-animation 500ms ease-out;
 }
-
+ 
 @keyframes pipe-animation {
     from {
         right: -80px;
     }
-
+ 
     to {
         right: 100%;
     }
 }
-
+ 
 @keyframes jump-animation {
     0% {
         bottom: 0;
     }
-
+ 
     40% {
         bottom: 180px;
     }
-
+ 
     50% {
         bottom: 180px;
     }
-
+ 
     100% {
         bottom: 0;
     }
 }
-
+ 
 @keyframes fundo-animation {
     from {
         right: -550px;
     }
-
+ 
     to {
         right: 100%;
     }
 }
-
+ 
 /* Modais / Telas Sobrepostas */
 .modal-overlay {
     position: fixed;
@@ -182,11 +182,11 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-
+ 
 .modal-overlay.active {
     display: flex;
 }
-
+ 
 .modal-card {
     background: #1f2438;
     border: 4px solid #e52521;
@@ -198,11 +198,11 @@ body {
     box-shadow: 0 0 30px rgba(229, 37, 33, 0.4), 0 15px 40px rgba(0, 0, 0, 0.7);
     box-sizing: border-box;
 }
-
+ 
 .modal-header {
     margin-bottom: 25px;
 }
-
+ 
 .game-title {
     font-family: 'Press Start 2P', cursive;
     color: #ffce00;
@@ -211,20 +211,20 @@ body {
     text-shadow: 3px 3px #e52521, 6px 6px #000000;
     margin-bottom: 10px;
 }
-
+ 
 .game-subtitle {
     font-size: 13px;
     color: #a4b1cd;
     margin-bottom: 22px;
 }
-
+ 
 /* Formulário de Início */
 .start-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
+ 
 .input-group {
     display: flex;
     flex-direction: column;
@@ -233,13 +233,13 @@ body {
     margin-bottom: 18px;
     text-align: left;
 }
-
+ 
 .input-group label {
     font-family: 'Press Start 2P', cursive;
     font-size: 11px;
     color: #ffffff;
 }
-
+ 
 .input-group input {
     width: 100%;
     padding: 14px 16px;
@@ -251,19 +251,19 @@ body {
     font-size: 15px;
     outline: none;
 }
-
+ 
 .input-group input:focus {
     border-color: #ffcc00;
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
 }
-
+ 
 /* Botões */
 .modal-actions {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
+ 
 .btn {
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
@@ -273,35 +273,35 @@ body {
     cursor: pointer;
     letter-spacing: 0.5px;
 }
-
+ 
 .btn-primary {
     background: linear-gradient(180deg, #e52521 0%, #b81410 100%);
     color: #fff;
     border-bottom: 4px solid #7a0b08;
 }
-
+ 
 .btn-primary:hover {
     background: linear-gradient(180deg, #ff3833 0%, #cf1915 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(229, 37, 33, 0.4);
 }
-
+ 
 .btn-primary:active {
     transform: translateY(2px);
     border-bottom: 2px solid #7a0b08;
 }
-
-tn-secondary {
+ 
+.btn-secondary {
     background: #2f3752;
     color: #cbd5e1;
     border-bottom: 4px solid #1a1e2f;
 }
-
+ 
 .btn-secondary:hover {
     background: #3c4667;
     color: #ffffff;
 }
-
+ 
 /* Status do Laragon */
 .server-status {
     margin-top: 20px;
@@ -312,7 +312,7 @@ tn-secondary {
     justify-content: center;
     gap: 8px;
 }
-
+ 
 .status-dot {
     width: 8px;
     height: 8px;
@@ -320,22 +320,22 @@ tn-secondary {
     background: #ffcc00;
     display: inline-block;
 }
-
+ 
 .status-dot.online {
     background: #10b981;
     box-shadow: 0 0 8px #10b981;
 }
-
+ 
 .status-dot.offline {
     background: #ef4444;
     box-shadow: 0 0 8px #ef4444;
 }
-
+ 
 /* Tela de Game Over & Ranking */
 .gameover-card {
     max-width: 540px;
 }
-
+ 
 .gameover-title {
     font-family: 'Press Start 2P', cursive;
     color: #e52521;
@@ -343,7 +343,7 @@ tn-secondary {
     text-shadow: 3px 3px #000;
     margin-bottom: 10px;
 }
-
+ 
 .final-score-box {
     background: #141726;
     border-radius: 8px;
@@ -351,25 +351,25 @@ tn-secondary {
     margin-bottom: 20px;
     border: 1px solid #333d5d;
 }
-
+ 
 .final-score-label {
     font-size: 12px;
     color: #94a3b8;
     margin-bottom: 4px;
 }
-
+ 
 .final-score-num {
     font-family: 'Press Start 2P', cursive;
     font-size: 24px;
     color: #ffcc00;
     text-shadow: 2px 2px #000;
 }
-
+ 
 /* Tabela de Ranking */
 .ranking-container {
     margin-bottom: 20px;
 }
-
+ 
 .ranking-title {
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
@@ -377,7 +377,7 @@ tn-secondary {
     margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
-
+ 
 .table-wrapper {
     max-height: 220px;
     overflow-y: auto;
@@ -385,23 +385,23 @@ tn-secondary {
     background: #121524;
     border: 1px solid #2b334d;
 }
-
+ 
 .table-wrapper::-webkit-scrollbar {
     width: 6px;
 }
-
+ 
 .table-wrapper::-webkit-scrollbar-thumb {
     background: #3b4468;
     border-radius: 4px;
 }
-
+ 
 .ranking-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
     text-align: left;
 }
-
+ 
 .ranking-table th {
     background: #242c44;
     color: #ffcc00;
@@ -412,91 +412,91 @@ tn-secondary {
     top: 0;
     z-index: 2;
 }
-
+ 
 .ranking-table td {
     padding: 8px 14px;
     border-bottom: 1px solid #1c2236;
 }
-
+ 
 .ranking-table tr:nth-child(even) {
     background: rgba(255, 255, 255, 0.02);
 }
-
+ 
 .ranking-table tr.highlight-current {
     background: rgba(255, 204, 0, 0.15) !important;
     font-weight: 700;
     color: #ffcc00;
 }
-
+ 
 .ranking-pos {
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     width: 40px;
 }
-
+ 
 .loading-cell {
     text-align: center;
     padding: 20px !important;
     color: #8c97b8;
 }
-
+ 
 .save-status {
     margin-top: 8px;
     font-size: 11px;
     color: #10b981;
 }
-
+ 
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: scale(0.96);
     }
-
+ 
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
-
+ 
 /* Responsividade */
 @media (max-width: 600px) {
     .game-board {
         height: 380px;
     }
-
+ 
     .roberto {
         width: 100px;
     }
-
+ 
     .pipe {
         width: 60px;
     }
-
+ 
     .hud-bar {
         padding: 10px 14px;
     }
-
+ 
     .label {
         font-size: 9px;
     }
-
+ 
     .value {
         font-size: 11px;
     }
-
+ 
     .game-title {
         font-size: 16px;
     }
-
+ 
     .btn {
         font-size: 10px;
         padding: 12px 14px;
     }
 }
-
-
-
-
+ 
+ 
+ 
+ 
 /* Cenário infinito */
 .scenario-track {
     position: absolute;
@@ -509,34 +509,34 @@ tn-secondary {
     pointer-events: none;
     z-index: 0;
 }
-
-
+ 
+ 
 .scenario-track img {
     width: 50%;
     height: 100%;
     flex-shrink: 0;
     object-fit: cover;
 }
-
-
+ 
+ 
 /* Movimento contínuo para a esquerda */
 @keyframes moverCenario {
     from {
         transform: translateX(0);
     }
-
-
+ 
+ 
     to {
         transform: translateX(-50%);
     }
 }
-
+ 
 /* ===== Seleção de Personagem ===== */
 .character-select {
     margin: 18px 0 10px;
     text-align: left;
 }
-
+ 
 .character-label {
     font-family: 'Press Start 2P', cursive;
     font-size: 11px;
@@ -544,14 +544,14 @@ tn-secondary {
     display: block;
     margin-bottom: 12px;
 }
-
+ 
 .character-options {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
 }
-
+ 
 .character-card {
     background: #121524;
     border: 3px solid #3b4468;
@@ -562,7 +562,7 @@ tn-secondary {
     transition: all 0.2s ease;
     width: 110px;
 }
-
+ 
 .character-card img {
     width: 70px;
     height: 70px;
@@ -570,25 +570,95 @@ tn-secondary {
     image-rendering: pixelated;
     margin-bottom: 6px;
 }
-
+ 
 .character-card span {
     font-family: 'Press Start 2P', cursive;
     font-size: 9px;
     color: #cbd5e1;
     display: block;
 }
-
+ 
 .character-card:hover {
     border-color: #ffcc00;
     transform: translateY(-3px);
 }
-
+ 
 .character-card.selected {
     border-color: #ffcc00;
     background: #1a2035;
     box-shadow: 0 0 12px rgba(255, 204, 0, 0.35);
 }
-
+ 
 .character-card.selected span {
     color: #ffcc00;
 }
+ 
+ 
+ 
+/* ===== Correção: tamanho das imagens nos cards de personagem ===== */
+.character-options {
+    display: flex !important;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ 
+.character-card img {
+    display: block !important;
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    margin: 0 auto 6px !important;
+}
+ 
+/* ===== Tamanho do personagem no jogo ===== */
+.roberto {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    object-position: left bottom;
+}
+ 
+@media (max-width: 600px) {
+    .roberto {
+        width: 100px;
+        height: 100px;
+    }
+}
+ 
+ 
+/* ===== Moedas ===== */
+.coin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.coin {
+    position: absolute;
+    left: 100%;
+    bottom: 30px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff3a0 0%, #ffcc00 45%, #d99a00 100%);
+    border: 3px solid #a86e00;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 204, 0, 0.6);
+    z-index: 5;
+    display: none;
+    pointer-events: none;
+    animation: coin-spin 0.8s linear infinite;
+}
+ 
+.coin.active {
+    display: block;
+}
+ 
+@keyframes coin-spin {
+    0%   { transform: scaleX(1); }
+    50%  { transform: scaleX(0.25); }
+    100% { transform: scaleX(1); }
+}
+ 
+    
